@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	UI theme adapted from:
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Create Post</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/home/basecamp/web_dev/vscode-java/basecampnomination/css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <noscript> <link rel="stylesheet" href="/css/noscript.css" /></noscript>
+</head>
+<style>
+    #nav {
+        background-color: #3b1b0C;
+
+    }
+
+    #image {
+        vertical-align: middle;
+    }
+    body{
+        background-color: #E9E9E9;
+    }
+    #info {
+        margin: 1rem 8rem 0rem 8rem;
+    }
+
+    img {
+        width: 100%;
+    }
+    .container-lg {
+        background-image: url("https://basecampcodingacademy.org/images/header-background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .nav-link {
+        color: #999898;
+    }
+    #card{
+        width: 45%;
+        background-color: white;
+    }
+
+
+    @media only screen and (max-width: 880.5px) {
+        body{
+            width: 100%;
+            padding: 0px;
+        }
+
+        #info {
+            font-size: .8rem;
+            width: 97%;
+            margin: 1rem .5rem 0rem .5rem;
+        }
+
+        #info h1 {
+            font-size: 1.3rem;
+        }
+
+        #nav *{
+            font-size: 1rem;
+            margin: 0rem;
+
+        }
+        #list {
+            margin: 0rem;
+            display: flex;
+        }
+        #li{
+            display: flex;
+        }
+
+
+    }
+
+
+</style>
+
+<body>
+<div class="container-lg">
+    <div class="col-12 row">
+        <a class="my-5 mx-auto" href="#"><img id="image" src="https://basecampcodingacademy.org/images/header-logo.png" ></a>
+    </div>
+</div>
+<form action="/CreatePost" method="POST">
+    <div class="d-flex justify-content-center">
+        <div id="card" class="border border-dark rounded p-3 m-2">
+            <div class="d-flex">
+            <div class="mr-5">
+                    <div class="form-group">
+                        <label>Paste Image Url Here</label>
+                        <input required class="form-control" type="url" name="imageURL">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input required class="form-control" type="text" name="CompanyName">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Position</label>
+                        <input required class="form-control" type="text" name="JobPosition">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input required class="form-control" type="text" name="Location">
+                    </div>
+            </div>
+                <div class="ml-5">
+                    <div class="form-group">
+                        <label>Today's Date</label>
+                        <input required class="form-control" type="Date" name="PostDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry(Team / Group)</label>
+                        <input required class="form-control" type="text" name="Industry">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Employment Type</label>
+                        <label>(Full-Time / Part-time)</label>
+                        <input required class="form-control" type="text" name="EmploymentType">
+                    </div>
+                    <div class="form-group">
+                        <label>Experience Level</label>
+                        <input required class="form-control" type="text" name="JobFunction">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea required class="form-control" type="text" name="Description"></textarea>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
